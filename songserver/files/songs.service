@@ -1,0 +1,9 @@
+[Unit]
+Description=Jiaojiao Song Server
+After=network.target
+
+[Service]
+LimitNOFILE=100000
+ExecStart=/usr/bin/songbin -p 4290 -d /data/songs
+Restart=always
+RestartSec=5
